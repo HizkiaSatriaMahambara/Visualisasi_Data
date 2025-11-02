@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="InsightBoard - Analisis Penjualan", layout="wide", initial_sidebar_state="expanded")
 
-CSV_PATH = "CSV_PATH = uts/Copy of finalProj_df - df.csv"
+CSV_PATH = "uts/Copy of finalProj_df - df.csv"
 df = pd.read_csv(CSV_PATH)
 
 date_cols = [c for c in df.columns if "date" in c.lower() or "time" in c.lower()]
@@ -142,6 +142,7 @@ elif menu == "Segmentasi Pelanggan":
         st.dataframe(df_seg.head(15))
     else:
         st.warning("Kolom customer_id tidak ditemukan dalam dataset.")
+
 
 
 
